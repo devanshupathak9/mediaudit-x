@@ -1,0 +1,42 @@
+{
+  "run_timestamp": "2026-09-19T03:20:35Z",
+  "total_tool_calls": 26,
+  "overall_avg_latency_ms": 558,
+  "overall_p50_latency_ms": 706,
+  "overall_p95_latency_ms": 708,
+  "policy_retrieval": {
+    "total_cases": 9,
+    "in_domain_cases": 6,
+    "precision_at_1": 1.0,
+    "recall_at_5": 1.0,
+    "MRR": 1.0,
+    "avg_latency_ms": 403,
+    "p50_latency_ms": 250,
+    "p95_latency_ms": 1120
+  },
+  "drug_interaction_detection": {
+    "total_cases": 14,
+    "positive_cases": 10,
+    "negative_cases": 4,
+    "TP": 10,
+    "FP": 0,
+    "TN": 4,
+    "FN": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "accuracy": 1.0,
+    "severity_accuracy": 1.0,
+    "avg_latency_ms": 707,
+    "p50_latency_ms": 707,
+    "p95_latency_ms": 708
+  },
+  "trajectory_retrieval": {
+    "total_cases": 3,
+    "execution_success_rate": 1.0,
+    "cases_with_data": 0,
+    "avg_latency_ms": 328,
+    "p50_latency_ms": 251,
+    "p95_latency_ms": 487
+  }
+}

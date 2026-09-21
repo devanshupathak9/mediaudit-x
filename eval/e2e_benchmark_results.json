@@ -1,0 +1,118 @@
+{
+  "total_cases": 12,
+  "correct": 12,
+  "accuracy": 1.0,
+  "per_class": {
+    "APPROVED": {
+      "TP": 5,
+      "FP": 0,
+      "FN": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "DENIED": {
+      "TP": 7,
+      "FP": 0,
+      "FN": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "REQUEST_INFO": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 0,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0
+    }
+  },
+  "avg_latency_ms": 872,
+  "details": [
+    {
+      "label": "Knee surgery, UHC, no drugs, no step therapy history",
+      "expected": "DENIED",
+      "got": "DENIED",
+      "correct": true,
+      "latency_ms": 1337
+    },
+    {
+      "label": "Hip surgery, Medicare, no drugs, no step therapy needed",
+      "expected": "APPROVED",
+      "got": "APPROVED",
+      "correct": true,
+      "latency_ms": 723
+    },
+    {
+      "label": "Knee surgery, Medicare, no drugs",
+      "expected": "APPROVED",
+      "got": "APPROVED",
+      "correct": true,
+      "latency_ms": 492
+    },
+    {
+      "label": "MRI brain, Cigna, no drugs, no step therapy history",
+      "expected": "DENIED",
+      "got": "DENIED",
+      "correct": true,
+      "latency_ms": 495
+    },
+    {
+      "label": "Spine fusion, BCBS, no drugs, no step therapy history",
+      "expected": "DENIED",
+      "got": "DENIED",
+      "correct": true,
+      "latency_ms": 489
+    },
+    {
+      "label": "PT for back pain, Aetna, no drugs",
+      "expected": "APPROVED",
+      "got": "APPROVED",
+      "correct": true,
+      "latency_ms": 491
+    },
+    {
+      "label": "Hip surgery, Medicare, warfarin+aspirin interaction",
+      "expected": "DENIED",
+      "got": "DENIED",
+      "correct": true,
+      "latency_ms": 1192
+    },
+    {
+      "label": "Hip surgery, Medicare, warfarin+fluconazole interaction",
+      "expected": "DENIED",
+      "got": "DENIED",
+      "correct": true,
+      "latency_ms": 1190
+    },
+    {
+      "label": "Hip surgery, Medicare, safe drugs (metformin+acetaminophen)",
+      "expected": "APPROVED",
+      "got": "APPROVED",
+      "correct": true,
+      "latency_ms": 1188
+    },
+    {
+      "label": "Knee UHC, apixaban+ketorolac contraindicated",
+      "expected": "DENIED",
+      "got": "DENIED",
+      "correct": true,
+      "latency_ms": 1188
+    },
+    {
+      "label": "No policy match, cystitis visit",
+      "expected": "APPROVED",
+      "got": "APPROVED",
+      "correct": true,
+      "latency_ms": 487
+    },
+    {
+      "label": "Eliquis+Toradol brand names, knee surgery",
+      "expected": "DENIED",
+      "got": "DENIED",
+      "correct": true,
+      "latency_ms": 1194
+    }
+  ]
+}
