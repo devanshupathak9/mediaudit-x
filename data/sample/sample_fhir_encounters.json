@@ -1,0 +1,54 @@
+[
+  {
+    "patient_id": "PAT-883910",
+    "encounter_id": "ENC-1",
+    "timestamp": "2026-06-01T09:00:00Z",
+    "resource_type": "Encounter",
+    "clinical_status": "finished",
+    "code": "97110",
+    "code_display": "Physical Therapy Session",
+    "clinician_notes": "Patient attended one PT session, reports ongoing knee pain."
+  },
+  {
+    "patient_id": "PAT-883910",
+    "encounter_id": "ENC-2",
+    "timestamp": "2026-06-15T09:00:00Z",
+    "resource_type": "Encounter",
+    "clinical_status": "finished",
+    "code": "97110",
+    "code_display": "Physical Therapy Session",
+    "clinician_notes": "Second PT session, minimal improvement noted."
+  },
+  {
+    "patient_id": "PAT-883910",
+    "encounter_id": "ENC-3",
+    "timestamp": "2026-06-22T09:00:00Z",
+    "resource_type": "MedicationRequest",
+    "clinical_status": "active",
+    "code": "5640",
+    "code_display": "Ibuprofen 600mg",
+    "dosage": "600mg TID"
+  },
+  {
+    "patient_id": "PAT-883910",
+    "encounter_id": "ENC-4",
+    "timestamp": "2026-07-01T09:00:00Z",
+    "resource_type": "MedicationRequest",
+    "clinical_status": "active",
+    "code": "1114195",
+    "code_display": "Eliquis 5mg",
+    "dosage": "5mg BID",
+    "clinician_notes": "Patient started on Eliquis for atrial fibrillation, unrelated to knee complaint."
+  },
+  {
+    "patient_id": "PAT-883910",
+    "encounter_id": "ENC-5",
+    "timestamp": "2026-08-01T09:00:00Z",
+    "resource_type": "MedicationRequest",
+    "clinical_status": "active",
+    "code": "6960",
+    "code_display": "Toradol 10mg",
+    "dosage": "10mg QID PRN pain",
+    "clinician_notes": "New prescription: Toradol 10mg for post-op pain control ahead of scheduled knee surgery."
+  }
+]

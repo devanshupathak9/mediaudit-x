@@ -1,0 +1,35 @@
+{
+  "doc_id": "DOC-OCR-TEST-001",
+  "blocks": [
+    {
+      "text": "PATIENT: Jane Doe (PAT-883910). Orthopedic surgery consultation for chronic right knee pain.",
+      "page_number": 1,
+      "bounding_box": { "x": 72, "y": 90, "width": 460, "height": 20 }
+    },
+    {
+      "text": "Assessment: Severe osteoarthritis of right knee, primary (M17.11), confirmed on imaging.",
+      "page_number": 1,
+      "bounding_box": { "x": 72, "y": 130, "width": 460, "height": 20 }
+    },
+    {
+      "text": "History: Patient completed two physical therapy  sessions and has been on Ibuprofen 600mg TID with minimal symptom improvement.",
+      "page_number": 1,
+      "bounding_box": { "x": 72, "y": 170, "width": 460, "height": 20 }
+    },
+    {
+      "text": "Plan: Proceeding with Total Knee Arthroplasty, right knee. Arthroplasty, knee, condyle and plateau; medial AND lateral compartments.",
+      "page_number": 2,
+      "bounding_box": { "x": 72, "y": 90, "width": 460, "height": 20 }
+    },
+    {
+      "text": "Current medications: Eliquis 5mg BID for atrial fibrillation. New post-operative prescription: Toradol 10mg QID PRN pain control.",
+      "page_number": 2,
+      "bounding_box": { "x": 72, "y": 130, "width": 460, "height": 20 }
+    },
+    {
+      "text": "Estimated total billed amount: $48,000.00.",
+      "page_number": 2,
+      "bounding_box": { "x": 72, "y": 170, "width": 460, "height": 20 }
+    }
+  ]
+}

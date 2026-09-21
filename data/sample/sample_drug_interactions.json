@@ -1,0 +1,28 @@
+[
+  {
+    "interaction_id": "INT-1",
+    "drug_a_rxnorm": "11289",
+    "drug_a_name": "Warfarin",
+    "drug_a_synonyms": "Coumadin Jantoven Warfarin Sodium",
+    "drug_b_rxnorm": "4450",
+    "drug_b_name": "Fluconazole",
+    "drug_b_synonyms": "Diflucan",
+    "severity": "Major",
+    "mechanism": "Fluconazole inhibits CYP2C9 metabolism of warfarin, increasing bleeding risk.",
+    "fda_boxed_warning": true,
+    "fda_citation": "Warfarin Sodium FDA label, boxed warning (verified via openFDA 16 Sept 2026): \"Warfarin sodium can cause major or fatal bleeding... Drugs, dietary changes, and other factors affect INR levels achieved with warfarin sodium therapy [see Drug Interactions (7)].\""
+  },
+  {
+    "interaction_id": "INT-2",
+    "drug_a_rxnorm": "1364430",
+    "drug_a_name": "Apixaban",
+    "drug_a_synonyms": "Eliquis",
+    "drug_b_rxnorm": "35827",
+    "drug_b_name": "Ketorolac",
+    "drug_b_synonyms": "Toradol",
+    "severity": "Contraindicated",
+    "mechanism": "Combined anticoagulant and NSAID significantly increases GI and systemic bleeding risk.",
+    "fda_boxed_warning": true,
+    "fda_citation": "Apixaban FDA label, boxed warning (verified via openFDA 16 Sept 2026): risk factors for spinal/epidural hematoma explicitly list \"concomitant use of other drugs that affect hemostasis, such as nonsteroidal anti-inflammatory drugs (NSAIDs), platelet inhibitors, other anticoagulants.\""
+  }
+]

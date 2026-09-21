@@ -1,0 +1,41 @@
+[
+  {
+    "interaction_id": "INT-3",
+    "drug_a_rxnorm": "11289",
+    "drug_a_name": "Warfarin",
+    "drug_a_synonyms": "Coumadin Jantoven Warfarin Sodium",
+    "drug_b_rxnorm": "2551",
+    "drug_b_name": "Ciprofloxacin",
+    "drug_b_synonyms": "Cipro",
+    "severity": "Major",
+    "mechanism": "Ciprofloxacin inhibits CYP1A2-mediated metabolism of warfarin and displaces it from plasma proteins, increasing INR and bleeding risk. This is a well-established, widely documented interaction (distinct from the Warfarin+Fluconazole pair already in the sample set) included here specifically because it is the real interaction present in a real Synthea-generated patient's medication history (Warfarin Sodium, active; Ciprofloxacin, prescribed 2020-12-03 for acute cystitis).",
+    "fda_boxed_warning": false,
+    "fda_citation": "Warfarin Sodium FDA label, boxed warning (verified via openFDA 16 Sept 2026): \"Warfarin sodium can cause major or fatal bleeding... Drugs, dietary changes, and other factors affect INR levels achieved with warfarin sodium therapy [see Drug Interactions (7)].\" Ciprofloxacin's CYP1A2-inhibition mechanism specifically is general pharmacology knowledge, not itself quoted from the label text above -- flagged here so it isn't mistaken for a direct quote."
+  },
+  {
+    "interaction_id": "INT-4",
+    "drug_a_rxnorm": "11289",
+    "drug_a_name": "Warfarin",
+    "drug_a_synonyms": "Coumadin Jantoven Warfarin Sodium",
+    "drug_b_rxnorm": "1191",
+    "drug_b_name": "Aspirin",
+    "drug_b_synonyms": "ASA Acetylsalicylic acid Bayer",
+    "severity": "Major",
+    "mechanism": "Concurrent use of warfarin (anticoagulant) and aspirin (antiplatelet/NSAID) increases the risk of bleeding through additive antihemostatic effects -- aspirin irreversibly inhibits platelet aggregation while warfarin inhibits vitamin K-dependent clotting factors, and aspirin's antiplatelet/NSAID effect independently increases gastric mucosal bleeding risk.",
+    "fda_boxed_warning": false,
+    "fda_citation": "Low Dose Aspirin (81 mg) OTC Drug Facts label, Warnings section (verified via openFDA 18 Sept 2026, RXCUI 1191 verified via RxNav): 'Stomach bleeding warning: This product contains an NSAID, which may cause severe stomach bleeding. The chance is higher if you: ... take a blood thinning (anticoagulant) or steroid drug...' Aspirin's antiplatelet-mechanism explanation is general pharmacology knowledge, not itself quoted from this label."
+  },
+  {
+    "interaction_id": "INT-5",
+    "drug_a_rxnorm": "29046",
+    "drug_a_name": "Lisinopril",
+    "drug_a_synonyms": "Prinivil Zestril",
+    "drug_b_rxnorm": "52175",
+    "drug_b_name": "Losartan",
+    "drug_b_synonyms": "Cozaar Losartan Potassium",
+    "severity": "Moderate",
+    "mechanism": "Combining an ACE inhibitor (lisinopril) with an angiotensin receptor blocker (losartan) produces dual blockade of the renin-angiotensin-aldosterone system. Both drugs independently reduce aldosterone-driven potassium excretion, so used together they carry an increased risk of hyperkalemia and renal function decline without established added cardiovascular benefit over either drug alone -- the rationale behind current guideline recommendations against routine ACEi+ARB combination therapy.",
+    "fda_boxed_warning": false,
+    "fda_citation": "Lisinopril/hydrochlorothiazide FDA label, Clinical Pharmacology section (verified via openFDA 18 Sept 2026, RXCUI 29046 for lisinopril and 52175 for losartan verified via RxNav): 'Inhibition of ACE results in decreased plasma angiotensin II which leads to decreased vasopressor activity and to decreased aldosterone secretion. The latter decrease may result in a small increase of serum potassium... approximately 15 percent of patients had increases greater than 0.5 mEq/L.' The specific dual-ACEi+ARB hyperkalemia-risk framing is general clinical pharmacology/guideline knowledge (consistent with the ONTARGET trial), not itself a direct quote from this label -- flagged here so it isn't mistaken for a literal FDA statement."
+  }
+]

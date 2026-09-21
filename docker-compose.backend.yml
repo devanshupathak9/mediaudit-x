@@ -1,0 +1,32 @@
+# Backend only (no UI), for a server such as a Hostinger VPS.
+#
+#   docker compose -f docker-compose.backend.yml up -d --build   start (background)
+#   docker compose -f docker-compose.backend.yml logs -f          logs
+#   docker compose -f docker-compose.backend.yml down             stop
+#
+# API: http://<server-ip>:8000   Swagger: http://<server-ip>:8000/docs
+#
+# Settings come from backend/.env (Elasticsearch, AWS/LLM keys,
+# CORS_ORIGINS). Missing indices are created on startup. Optional sample
+# data (only loads if insurance-claims is empty):
+#   docker compose -f docker-compose.backend.yml run --rm backend sh ./docker-setup.sh
+
+name: mediaudit-x-backend
+
+services:
+  backend:
+    build: ./backend
+    env_file: ./backend/.env
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+    volumes:
+      # Uploaded documents; survives restarts and rebuilds.
+      - uploads:/app/uploads
+      # Sample data, only used by docker-setup.sh.
+      - ./data:/data:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+volumes:
+  uploads:

@@ -1,0 +1,23 @@
+{
+  "mappings": {
+    "properties": {
+      "doc_id":            { "type": "keyword" },
+      "claim_id":          { "type": "keyword" },
+      "original_filename": { "type": "keyword" },
+      "extension":         { "type": "keyword" },
+      "detected_type":     { "type": "keyword" },
+      "client_mime_type":  { "type": "keyword" },
+      "size_bytes":        { "type": "long" },
+      "sha256":            { "type": "keyword" },
+      "source_uri":        { "type": "keyword" },
+      "doc_type":          { "type": "keyword" },
+      "page_count":        { "type": "integer" },
+      "image_width":       { "type": "integer" },
+      "image_height":      { "type": "integer" },
+      "ocr_status":        { "type": "keyword" },
+      "warnings":          { "type": "keyword" },
+      "uploaded_at":       { "type": "date" },
+      "uploaded_by":       { "type": "keyword" }
+    }
+  }
+}

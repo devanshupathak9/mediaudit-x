@@ -1,0 +1,67 @@
+[
+  {
+    "claim_id": "CLM-2001",
+    "patient_id": "922fb35e-148d-9e82-7e65-bfa05e3b3515",
+    "payer_name": "UnitedHealthcare",
+    "cpt_code": "27447",
+    "icd10_code": "M17.11",
+    "claim_amount": 46500.0,
+    "claim_type": "inpatient_prior_auth",
+    "submitted_date": "2026-09-01",
+    "status": "PENDING",
+    "attached_documents": [],
+    "_source_note": "Real Synthea-generated patient (Agnes294 Wuckert783). Her generated record has a real Osteoarthritis of knee condition but NO documented physical therapy / conservative therapy encounters at all -- this claim demonstrates the trajectory tool correctly finding zero evidence (step_therapy_met=False because total_conservative_encounters=0), not a fabricated 'almost enough' duration."
+  },
+  {
+    "claim_id": "CLM-2002",
+    "patient_id": "b6a1cac9-8873-36a7-e726-4aad8a07d44d",
+    "payer_name": "Aetna",
+    "cpt_code": "99213",
+    "icd10_code": "N30.00",
+    "claim_amount": 420.0,
+    "claim_type": "outpatient",
+    "submitted_date": "2026-09-10",
+    "status": "PENDING",
+    "attached_documents": [],
+    "_source_note": "Real Synthea-generated patient (Renaldo199 Crist667). His generated record has a real, verified Warfarin Sodium prescription (active, multiple refills through 2026) and a real Ciprofloxacin prescription on 2020-12-03 for a real Acute infective cystitis (UTI) diagnosis -- this claim demonstrates the drug interaction tool firing on a genuine warfarin + ciprofloxacin overlap in real generated data, not a hand-built fixture."
+  },
+  {
+    "claim_id": "CLM-2003",
+    "patient_id": "d3727ff2-5d7b-347f-d78c-edc4323cf890",
+    "payer_name": "Medicare (CMS Local Coverage Determination)",
+    "cpt_code": "27130",
+    "icd10_code": "M16.9",
+    "claim_amount": 42800.0,
+    "claim_type": "inpatient_prior_auth",
+    "submitted_date": "2026-09-18",
+    "status": "PENDING",
+    "attached_documents": [],
+    "_source_note": "Real Synthea-generated patient (Eunice461 Fay398). Her generated record has a real Osteoarthritis of hip diagnosis (SNOMED 239872002) but, like CLM-2001, NO documented physical therapy / conservative therapy encounters. payer_name is set to exactly match the real CMS Medicare LCD policy data already indexed (POL-MEDICARE-LCD-34163 / L34163 'Total Hip Arthroplasty') rather than a commercial payer name -- this is the one claim in the sample set that actually resolves the payer_name exact-match gap flagged in the Backend Architecture docs, so this claim's policy match against the real Medicare hip LCD is the closest thing to a fully real, end-to-end (real patient + real policy + real decision) demo case available. ICD-10 code M16.9 (Osteoarthritis of hip, unspecified, unspecified hip) was chosen deliberately as the unspecified/no-laterality code since the underlying SNOMED data carries no laterality -- unlike CLM-2001's M17.11, which specifies a right knee that isn't actually present in that patient's coded data either (a pre-existing inconsistency in the current sample set worth knowing about, not fixed here since it wasn't asked for)."
+  },
+  {
+    "claim_id": "CLM-2004",
+    "patient_id": "5fb3b9bc-eba6-e693-4e05-6bd91dbea56b",
+    "payer_name": "Cigna",
+    "cpt_code": "99214",
+    "icd10_code": "I48.91",
+    "claim_amount": 385.0,
+    "claim_type": "outpatient",
+    "submitted_date": "2026-09-18",
+    "status": "PENDING",
+    "attached_documents": [],
+    "_source_note": "Real Synthea-generated patient (Galen747 Koelpin146). His generated record has a real, active Atrial fibrillation diagnosis (2023) managed with Warfarin Sodium 5mg (active) plus a real, separate history of Acute non-ST elevation myocardial infarction (2013) managed with an active aspirin 81mg prescription -- two independently legitimate prescriptions from what would likely be two different care episodes/prescribers, creating a real, undetected bleeding-risk interaction. Demonstrates the drug interaction tool catching a genuine overlap that arose from parallel, clinically-reasonable treatment tracks rather than an obviously erroneous prescription."
+  },
+  {
+    "claim_id": "CLM-2005",
+    "patient_id": "080b069b-5108-46b6-ecef-6aacd3b9ef3f",
+    "payer_name": "Humana",
+    "cpt_code": "99214",
+    "icd10_code": "I10",
+    "claim_amount": 310.0,
+    "claim_type": "outpatient",
+    "submitted_date": "2026-09-18",
+    "status": "PENDING",
+    "attached_documents": [],
+    "_source_note": "Real Synthea-generated patient (Chester802 Aufderhar910). His generated record has real, active Essential hypertension and Chronic congestive heart failure diagnoses, managed with concurrently active Lisinopril (ACE inhibitor) and Losartan Potassium (ARB) prescriptions -- a real dual renin-angiotensin-aldosterone-system (RAAS) blockade combination current guidelines generally advise against due to hyperkalemia/renal risk. Note: this patient's real generated record also shows two lisinopril entries (10mg and 20mg) both marked 'active' on the same date -- likely a Synthea dose-titration artifact rather than a genuine duplicate prescription, left as-is rather than silently cleaned up since it's real generated output."
+  }
+]

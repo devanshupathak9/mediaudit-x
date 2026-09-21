@@ -1,0 +1,22 @@
+{
+  "mappings": {
+    "properties": {
+      "adjudication_id": { "type": "keyword" },
+      "claim_id":        { "type": "keyword" },
+      "status":          { "type": "keyword" },
+      "cited_evidence": {
+        "type": "nested",
+        "properties": {
+          "source_index":      { "type": "keyword" },
+          "source_id":         { "type": "keyword" },
+          "byte_offset_start": { "type": "integer" },
+          "byte_offset_end":   { "type": "integer" },
+          "excerpt":           { "type": "text" }
+        }
+      },
+      "generated_letter": { "type": "text" },
+      "decided_at":       { "type": "date" },
+      "decided_by":       { "type": "keyword" }
+    }
+  }
+}

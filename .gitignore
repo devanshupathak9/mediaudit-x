@@ -1,0 +1,44 @@
+# --- Secrets ---
+# backend/.env holds the live Elastic API key and AWS Bedrock bearer
+# token. Next.js also reads .env.local / .env.production at the frontend
+# root. backend/.env.example is the tracked template.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --- Python (backend) ---
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Node / Next.js (frontend) ---
+node_modules/
+.next/
+out/
+tsconfig.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+yarn-error.log*
+
+# --- Runtime artifacts ---
+# Uploaded claim documents land here at runtime (PHI-bearing). Must be
+# "uploads/*" and not "uploads/": git cannot re-include .gitkeep if its
+# parent directory itself is excluded.
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# --- Editors / OS ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

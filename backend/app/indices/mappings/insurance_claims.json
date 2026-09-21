@@ -1,0 +1,101 @@
+{
+  "mappings": {
+    "properties": {
+      "fhir_claim":      { "type": "object", "enabled": false },
+      "claim_id":        { "type": "keyword" },
+      "patient_id":      { "type": "keyword" },
+      "payer_name":      { "type": "keyword" },
+      "cpt_code":        { "type": "keyword" },
+      "icd10_code":      { "type": "keyword" },
+      "claim_amount":    { "type": "float" },
+      "claim_type":      { "type": "keyword" },
+      "submitted_date":  { "type": "date" },
+      "status":          { "type": "keyword" },
+      "source":          { "type": "keyword" },
+      "submitted_by":    { "type": "keyword" },
+      "latest_review": {
+        "properties": {
+          "decision":              { "type": "keyword" },
+          "status":                { "type": "keyword" },
+          "comment":               { "type": "text" },
+          "reviewer_name":         { "type": "keyword" },
+          "decided_at":            { "type": "date" },
+          "adjudication_id":       { "type": "keyword" },
+          "ai_recommended_status": { "type": "keyword" }
+        }
+      },
+      "review_history": {
+        "properties": {
+          "decision":              { "type": "keyword" },
+          "status":                { "type": "keyword" },
+          "comment":               { "type": "text" },
+          "reviewer_name":         { "type": "keyword" },
+          "decided_at":            { "type": "date" },
+          "adjudication_id":       { "type": "keyword" },
+          "ai_recommended_status": { "type": "keyword" }
+        }
+      },
+      "attached_documents": {
+        "type": "nested",
+        "properties": {
+          "doc_id":     { "type": "keyword" },
+          "doc_type":   { "type": "keyword" },
+          "source_uri": { "type": "keyword" }
+        }
+      },
+      "extracted_diagnoses": {
+        "type": "nested",
+        "properties": {
+          "code":        { "type": "keyword" },
+          "description": { "type": "text" },
+          "cited_text":  { "type": "text" },
+          "doc_id":      { "type": "keyword" },
+          "page_number": { "type": "integer" },
+          "score":       { "type": "float" },
+          "sources":     { "type": "keyword" },
+          "alternatives": {
+            "type": "nested",
+            "properties": {
+              "code":        { "type": "keyword" },
+              "description": { "type": "text" },
+              "score":       { "type": "float" }
+            }
+          }
+        }
+      },
+      "extracted_procedures": {
+        "type": "nested",
+        "properties": {
+          "code":        { "type": "keyword" },
+          "description": { "type": "text" },
+          "cited_text":  { "type": "text" },
+          "doc_id":      { "type": "keyword" },
+          "page_number": { "type": "integer" },
+          "score":       { "type": "float" },
+          "sources":     { "type": "keyword" },
+          "alternatives": {
+            "type": "nested",
+            "properties": {
+              "code":        { "type": "keyword" },
+              "description": { "type": "text" },
+              "score":       { "type": "float" }
+            }
+          }
+        }
+      },
+      "extracted_medications": {
+        "type": "nested",
+        "properties": {
+          "name":        { "type": "text" },
+          "rxnorm_code": { "type": "keyword" },
+          "cited_text":  { "type": "text" },
+          "doc_id":      { "type": "keyword" },
+          "page_number": { "type": "integer" }
+        }
+      },
+      "evidence_hash":       { "type": "keyword" },
+      "source_doc_id":       { "type": "keyword" },
+      "validation_warnings": { "type": "text" }
+    }
+  }
+}

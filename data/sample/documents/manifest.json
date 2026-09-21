@@ -1,0 +1,30 @@
+{
+  "_source_note": "Unlike data/synthea_samples (real Synthea-generated patient data), every file in this directory is entirely fabricated for exercising the OCR pipeline (Stage 2 of Architecture Plan.txt) end to end -- no real patient, encounter, or claim underlies them. 'John Smith (PAT-770231)' is not a real patient id in any index. The CPT/ICD codes used (99213, 62323, 72100, M51.36) are real, existing codes chosen for plausibility, but they were not verified live against an official source (CMS/AMA) in the session that generated these fixtures, and they are not tied to any real clinical scenario -- do not use these files as adjudication test cases or cite their codes as verified without checking them the way the rest of this repo's golden rule requires.",
+  "files": [
+    {
+      "file": "clinical_note.pdf",
+      "type": "real-text PDF (fpdf2)",
+      "purpose": "Exercises the pdfplumber text-layer path (engine=pdf_text)."
+    },
+    {
+      "file": "clinical_note.png",
+      "type": "rendered image (PIL, monospace font)",
+      "purpose": "Exercises the Tesseract OCR path for a standalone image file (engine=tesseract). Verified similarity to source text ~0.99 with real Tesseract 5.4.0; observed real misreads of digit '0' as '@' in dates/dosages on this font -- a genuine OCR limitation, not injected."
+    },
+    {
+      "file": "hospital_bill.pdf",
+      "type": "real-text PDF (fpdf2)",
+      "purpose": "Exercises pdf_text on a tabular billing layout."
+    },
+    {
+      "file": "hospital_bill.png",
+      "type": "rendered image (PIL, monospace font)",
+      "purpose": "Exercises Tesseract on a tabular billing layout. Observed real limitation: image_to_string loses row alignment on tables (groups all descriptions, then all codes, then all charges, instead of per-row) -- plain OCR here is not table-structure-aware."
+    },
+    {
+      "file": "scanned_clinical_note.pdf",
+      "type": "image-only PDF (clinical_note.png embedded via Pillow, no text layer)",
+      "purpose": "Exercises the in-PDF fallback: pdfplumber finds no text layer on the page, so extract.py renders the page and routes it to Tesseract, same as a real scanned document upload."
+    }
+  ]
+}

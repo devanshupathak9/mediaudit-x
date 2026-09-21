@@ -1,0 +1,32 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "medical_code_analyzer": {
+          "type": "custom",
+          "tokenizer": "whitespace",
+          "filter": ["uppercase"]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "policy_id":             { "type": "keyword" },
+      "payer_name":            { "type": "keyword" },
+      "title":                 { "type": "text" },
+      "cpt_codes":             { "type": "text", "analyzer": "medical_code_analyzer" },
+      "icd10_codes":           { "type": "text", "analyzer": "medical_code_analyzer" },
+      "clinical_indications":  { "type": "text" },
+      "contraindications":     { "type": "text" },
+      "step_therapy_required": { "type": "boolean" },
+      "policy_vector": {
+        "type": "dense_vector",
+        "dims": 768,
+        "index": true,
+        "similarity": "dot_product",
+        "index_options": { "type": "bbq_disk" }
+      }
+    }
+  }
+}

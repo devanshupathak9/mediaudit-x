@@ -1,0 +1,74 @@
+[
+  {
+    "claim_id": "CLM-1002",
+    "patient_id": "PAT-772341",
+    "payer_name": "Aetna",
+    "cpt_code": "97110",
+    "icd10_code": "M54.5",
+    "claim_amount": 3200.00,
+    "claim_type": "outpatient",
+    "submitted_date": "2026-08-03",
+    "status": "PENDING",
+    "attached_documents": []
+  },
+  {
+    "claim_id": "CLM-1003",
+    "patient_id": "PAT-556219",
+    "payer_name": "Cigna",
+    "cpt_code": "70551",
+    "icd10_code": "G43.909",
+    "claim_amount": 5760.00,
+    "claim_type": "outpatient",
+    "submitted_date": "2026-07-28",
+    "status": "APPROVED",
+    "attached_documents": []
+  },
+  {
+    "claim_id": "CLM-1004",
+    "patient_id": "PAT-114887",
+    "payer_name": "UnitedHealthcare",
+    "cpt_code": "93306",
+    "icd10_code": "I25.10",
+    "claim_amount": 2340.00,
+    "claim_type": "outpatient",
+    "submitted_date": "2026-07-30",
+    "status": "PENDING",
+    "attached_documents": []
+  },
+  {
+    "claim_id": "CLM-1005",
+    "patient_id": "PAT-330761",
+    "payer_name": "Blue Cross Blue Shield",
+    "cpt_code": "22558",
+    "icd10_code": "M43.16",
+    "claim_amount": 28900.00,
+    "claim_type": "inpatient_prior_auth",
+    "submitted_date": "2026-07-22",
+    "status": "APPROVED",
+    "attached_documents": []
+  },
+  {
+    "claim_id": "CLM-1006",
+    "patient_id": "PAT-990142",
+    "payer_name": "UnitedHealthcare",
+    "cpt_code": "27130",
+    "icd10_code": "M16.11",
+    "claim_amount": 41250.00,
+    "claim_type": "inpatient_prior_auth",
+    "submitted_date": "2026-07-15",
+    "status": "DENIED",
+    "attached_documents": []
+  },
+  {
+    "claim_id": "CLM-1007",
+    "patient_id": "PAT-448820",
+    "payer_name": "Aetna",
+    "cpt_code": "29881",
+    "icd10_code": "M17.11",
+    "claim_amount": 12480.00,
+    "claim_type": "outpatient_prior_auth",
+    "submitted_date": "2026-07-10",
+    "status": "DENIED",
+    "attached_documents": []
+  }
+]

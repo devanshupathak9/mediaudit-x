@@ -1,0 +1,15 @@
+{
+  "mappings": {
+    "properties": {
+      "ledger_id":       { "type": "keyword" },
+      "adjudication_id": { "type": "keyword" },
+      "claim_id":        { "type": "keyword" },
+      "event_type":      { "type": "keyword" },
+      "ref_id":          { "type": "keyword" },
+      "record_hash":     { "type": "keyword" },
+      "prev_hash":       { "type": "keyword" },
+      "sequence_number": { "type": "long" },
+      "timestamp":       { "type": "date" }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "mappings": {
+    "properties": {
+      "patient_id":         { "type": "keyword" },
+      "encounter_id":       { "type": "keyword" },
+      "timestamp":          { "type": "date" },
+      "resource_type":      { "type": "keyword" },
+      "clinical_status":    { "type": "keyword" },
+      "code":               { "type": "keyword" },
+      "code_display":       { "type": "text" },
+      "dosage":             { "type": "keyword" },
+      "clinician_notes":    { "type": "text" },
+      "lab_result_numeric": { "type": "float" },
+      "notes_vector": {
+        "type": "dense_vector",
+        "dims": 768,
+        "index": true,
+        "similarity": "dot_product",
+        "index_options": { "type": "bbq_disk" }
+      }
+    }
+  }
+}

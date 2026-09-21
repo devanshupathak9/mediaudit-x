@@ -1,0 +1,29 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "rxnorm_analyzer": {
+          "type": "custom",
+          "tokenizer": "whitespace",
+          "filter": ["uppercase"]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "interaction_id":    { "type": "keyword" },
+      "drug_a_rxnorm":     { "type": "keyword" },
+      "drug_a_name":       { "type": "text", "analyzer": "rxnorm_analyzer" },
+      "drug_a_synonyms":   { "type": "text", "analyzer": "rxnorm_analyzer" },
+      "drug_b_rxnorm":     { "type": "keyword" },
+      "drug_b_name":       { "type": "text", "analyzer": "rxnorm_analyzer" },
+      "drug_b_synonyms":   { "type": "text", "analyzer": "rxnorm_analyzer" },
+      "severity":          { "type": "keyword" },
+      "mechanism":         { "type": "text" },
+      "fda_boxed_warning": { "type": "boolean" },
+      "fda_citation":      { "type": "keyword" },
+      "ndc_codes":         { "type": "keyword" }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "policy_id": "POL-UHC-KNEE-01",
+    "payer_name": "UnitedHealthcare",
+    "title": "Total Knee Arthroplasty Coverage Policy",
+    "cpt_codes": "27447",
+    "icd10_codes": "M17.11 M17.12",
+    "clinical_indications": "Severe osteoarthritis with failed conservative therapy including 6 months of physical therapy and NSAIDs",
+    "contraindications": "Active joint infection",
+    "step_therapy_required": true
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "mappings": {
+    "properties": {
+      "claim_id":    { "type": "keyword" },
+      "overall":     { "type": "keyword" },
+      "checked_at":  { "type": "date" },
+      "codes": {
+        "type": "nested",
+        "properties": {
+          "code":        { "type": "keyword" },
+          "code_system": { "type": "keyword" },
+          "result":      { "type": "keyword" },
+          "strength":    { "type": "float" },
+          "evidence": {
+            "type": "nested",
+            "properties": {
+              "source_index":     { "type": "keyword" },
+              "source_id":        { "type": "keyword" },
+              "byte_offset_start": { "type": "integer" },
+              "byte_offset_end":   { "type": "integer" },
+              "excerpt":          { "type": "text" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
